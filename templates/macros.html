@@ -31,3 +31,9 @@
         {% endif %}
     </nav>
 {% endmacro %}
+
+{% macro organization(itemprop) %}
+    <div {% if itemprop %} itemprop="{{itemprop}}" {% endif %}
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+{% endmacro %}
