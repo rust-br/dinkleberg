@@ -36,7 +36,7 @@
                     <ul class="base-list">
                         {% for relative in page.extra.relative_posts %}
                             <li>
-                                - <a href="{{relative.url}}">{{relative.label}}</a>
+                                - <a href="{{config.base_url}}{{relative.url}}">{{relative.label}}</a>
                             </li>
                         {% endfor %}
                     </ul>

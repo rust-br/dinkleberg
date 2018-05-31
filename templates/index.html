@@ -49,7 +49,7 @@
     {{ macro::organization(itemprop=false) }}
     <header class="header">
         <div class="container">
-            <a href="/">
+            <a class="title-link" href="{{config.base_url}}">
                 {% block header_title %}
                     <h1 class="title">{{config.title}}</h1>
                 {% endblock header_title %}

@@ -34,12 +34,12 @@
 
     address > span, .extra {
         font-size: 12px;
-        line-height: 10px;
+        line-height: 13px;
     }
 
     address {
         height: 20px;
-        margin: 10px 0 5px;
+        margin: 10px 0 3px;
         font-style: normal;
 
         & > span { color: $color-black }
@@ -64,7 +64,8 @@
     header {
         @media screen and (min-width: 900px) {
             position: fixed;
-            width: calc(25% - 35px);
+            width: calc(30% - 35px);
+            max-width: 285px;
         }
     }
 
@@ -76,10 +77,25 @@
         @media screen and (min-width: 900px) {
             border-top: 0px;
             border-left: 1px solid $color-lgrey;
-            margin-left: calc(25% + 30px);
+            margin-left: calc(28% + 30px);
             margin-top: 0px;
             padding-left: 30px;
-            width: 75%
+            width: 69%
+        }
+
+        img {
+            box-sizing: border-box;
+            max-width: 100%;
+            display: block;
+            padding: 20px;
+        }
+
+        p > img {
+            margin: 0 auto;
+        }
+
+        a {
+            color: $color-link;
         }
     }
 
