@@ -15,7 +15,7 @@
         </address>
         <div class="extra">
             {% if page.tags %}
-                {{config.extra.label_tag}}:
+                {{config.extra.label_tags}}:
                 {% for tag in page.tags %}
                     <a href="{{ get_taxonomy_url(kind="tag", name=tag) }}">{{ tag }}</a>
                     {% if page.tags | length > 1 %}

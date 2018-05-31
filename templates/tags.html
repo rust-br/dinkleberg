@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+    <main class="main">
+        <h3 class="page-title"> {{ config.label_tag }} </h3>
+        <ul class="base-list">
+            {% for tag in tags %}
+                <li>
+                    <a href="{{ tag.permalink }}">{{ tag.name }}</a>({{ tag.pages | length }})
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock content %}

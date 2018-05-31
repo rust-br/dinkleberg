@@ -7,7 +7,10 @@ highlight_code = true
 build_search_index = false
 
 [extra]
-label_tag = "Tags"
+label_tags = "Tags"
+label_tag = "Tag"
+label_categories = "Categories"
+label_category = "Category"
 label_relative_posts = "Relative Posts"
 label_next = "Next"
 label_previous = "Previous"
