@@ -63,7 +63,7 @@
             <aside class="sidebar">
                 {% for sidebar in config.extra.sidebar %}
                     <h3>{{ sidebar.name }}</h3>
-                    <ul>
+                    <ul class="base-list">
                         {% for item in sidebar.urls %}
                             <li>
                                 <a href="{{item.url}}">{{item.name}}</a>

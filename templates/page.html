@@ -29,6 +29,19 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
+
+            {% if page.extra.relative_posts %}
+                <div class="relative-posts">
+                    Relative Posts:
+                    <ul class="base-list">
+                        {% for relative in page.extra.relative_posts %}
+                            <li>
+                                - <a href="{{relative.url}}">{{relative.label}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
         </div>
     </header>
     <div itemprop="articleBody" class="body">

@@ -80,15 +80,15 @@ pre {
         color: $color-black;
         border-bottom: 1px solid $color-lgrey;
     }
+}
 
-    ul {
-        list-style: none;
-        padding: 0 15px;
+.base-list {
+    list-style: none;
+    padding: 0 15px;
 
-        & > li > a {
-            text-decoration: none;
-            color: $color-link;
-        }
+    & > li > a {
+        text-decoration: none;
+        color: $color-link;
     }
 }
 

@@ -82,4 +82,14 @@
             width: 75%
         }
     }
+
+    .relative-posts {
+        margin-top: 10px;
+        padding-top: 10px;
+
+        & > .base-list {
+            padding: 0px;
+            margin-top: 5px;
+        }
+    }
 }
