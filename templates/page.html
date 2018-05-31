@@ -15,7 +15,7 @@
         </address>
         <div class="extra">
             {% if page.tags %}
-                Tags:
+                {{config.extra.label_tag}}:
                 {% for tag in page.tags %}
                     <a href="{{ get_taxonomy_url(kind="tag", name=tag) }}">{{ tag }}</a>
                     {% if page.tags | length > 1 %}
@@ -32,7 +32,7 @@
 
             {% if page.extra.relative_posts %}
                 <div class="relative-posts">
-                    Relative Posts:
+                    {{config.extra.label_relative_posts}}:
                     <ul class="base-list">
                         {% for relative in page.extra.relative_posts %}
                             <li>

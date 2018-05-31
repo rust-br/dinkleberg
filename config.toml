@@ -7,6 +7,12 @@ highlight_code = true
 build_search_index = false
 
 [extra]
+label_tag = "Tags"
+label_relative_posts = "Relative Posts"
+label_next = "Next"
+label_previous = "Previous"
+label_page = "Page"
+label_of = "of"
 sidebar = [
     {name = "Social", urls=[
         {name="Twitter", url=""},
