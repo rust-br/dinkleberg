@@ -1,0 +1,33 @@
+{% macro post(page) %}
+    <a class="post" href="{{page.permalink}}">
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+            <span class="category">{{page.category}}</span>
+            <h2 class="title" itemprop="headline">{{page.title}}</h2>
+            <span class="description">{{page.description}}</span>
+
+            <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name">{{page.extra.author}}</span>
+            </address>
+            <div class="extra">
+                <span itemprop="datePublished">{{ page.date | date(format="%d/%m/%Y") }}</span>
+                - {{ page.reading_time }} minutos
+            </div>
+        </article>
+    </a>
+{% endmacro post %}
+
+{% macro post_nav(ref) %}
+    <nav class="page-navigator">
+        {% if ref.previous %}
+            <a href="{{ ref.previous }}">&laquo; Anterior</a>
+        {% else %}
+            <span>&laquo; Anterior</span>
+        {% endif %}
+            <span class="pages"> Página {{ ref.current_index }} de {{ ref.pagers | length }} </span>
+        {% if ref.next %}
+            <a href="{{ ref.next }}">Próxima &raquo;</a>
+        {% else %}
+            <span>Próxima &raquo;</span>
+        {% endif %}
+    </nav>
+{% endmacro %}

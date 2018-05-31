@@ -1,0 +1,121 @@
+$font-core: 'Open Sans', sans-serif;
+$font-alt: 'Source Code Pro', monospace;
+
+$color-black: rgba(0,0,0,.84);
+$color-grey: rgba(0,0,0,.54);
+$color-lgrey: rgba(0,0,0,0.20);
+$color-link: #2c3e50;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-core;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1032px;
+    padding: 10px;
+    margin: 0 auto;
+
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+.padding-header {
+    padding-top: 75px;
+}
+
+pre {
+    padding: 10px;
+}
+
+.header {
+    border-bottom: 1px solid $color-lgrey;
+    margin-bottom: 20px;
+    width: 100%;
+    background: #FFF;
+    position: fixed;
+
+    .title {
+        font-family: $font-alt;
+        text-align: center;
+        color: $color-black;
+        margin: 0;
+        font-size: 20px;
+
+        @media screen and (min-width: 900px) {
+            float: left;
+        }
+    }
+}
+
+
+.main {
+    width: 100%;
+
+    @media screen and (min-width: 900px) {
+        width: 65%;
+        float: left;
+    }
+}
+
+.sidebar {
+    width: 100%;
+    display: none;
+
+    @media screen and (min-width: 900px) {
+        width: 35%;
+        float: left;
+        display: block;
+    }
+
+    h3 {
+        margin: 0 0 5px;
+        padding: 0 5px 5px;
+        color: $color-black;
+        border-bottom: 1px solid $color-lgrey;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0 15px;
+
+        & > li > a {
+            text-decoration: none;
+            color: $color-link;
+        }
+    }
+}
+
+.page-title {
+    margin: 0 0 30px;
+    font-size: 26px;
+}
+
+.page-navigator {
+    margin-bottom: 15px;
+    text-align: center;
+
+    & > span, & > a {
+        color: $color-lgrey;
+        font-size: 12px;
+    }
+
+    & > .pages {
+        color: $color-grey;
+        font-size: 15px;
+        margin: 0 10px;
+    }
+
+    & > a {
+        color: $color-link;
+        text-decoration: none;
+    }
+}
+
+@import "post.scss"

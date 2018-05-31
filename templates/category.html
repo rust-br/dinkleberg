@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% block content %}
+    <main class="main">
+        <h3 class="page-title"> Categoria: {{category.name}} </h3>
+        {% for page in category.pages %}
+            {{ macro::post(page=page) }}
+        {% endfor %}
+    </main>
+{% endblock content %}

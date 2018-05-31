@@ -1,0 +1,85 @@
+.post {
+    width: 100%;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 50px;
+
+    .category, .description, .title {
+        display: block;
+    }
+
+    .category, .description, .extra {
+        color: $color-grey;
+        font-size: 15px;
+        line-height: 14px;
+        text-decoration: none;
+    }
+
+    .category {
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .title {
+        color: $color-black;
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 600;
+        margin: 0 0 8px;
+    }
+
+    .extra > a {
+        color: $color-link
+    }
+
+    address > span, .extra {
+        font-size: 12px;
+        line-height: 10px;
+    }
+
+    address {
+        height: 20px;
+        margin: 10px 0 5px;
+        font-style: normal;
+
+        & > span { color: $color-black }
+    }
+}
+
+.post-page {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+
+    .body, header {
+        width: 100%;
+
+        @media screen and (min-width: 900px) {
+            float: left;
+        }
+    }
+
+    header {
+        @media screen and (min-width: 900px) {
+            position: fixed;
+            width: calc(25% - 35px);
+        }
+    }
+
+    .body {
+        box-sizing: border-box;
+        border-top: 1px solid $color-lgrey;
+        margin-top: 30px;
+
+        @media screen and (min-width: 900px) {
+            border-top: 0px;
+            border-left: 1px solid $color-lgrey;
+            margin-left: calc(25% + 30px);
+            margin-top: 0px;
+            padding-left: 30px;
+            width: 75%
+        }
+    }
+}

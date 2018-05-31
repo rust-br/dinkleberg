@@ -1,0 +1,16 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+
+title = "dinkleberg"
+compile_sass = true
+highlight_code = true
+build_search_index = false
+
+[extra]
+sidebar = [
+    {name = "Social", urls=[
+        {name="Twitter", url=""},
+        {name="Facebook", url=""},
+        {name="Outro", url=""},
+    ]}
+]

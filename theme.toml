@@ -1,0 +1,10 @@
+name = "dinkleberg"
+description = "The Rust BR theme for Gutenberg"
+license = "MIT"
+homepage = "https://github.com/rust-br/dinkleberg"
+
+min_version = "0.3"
+
+[author]
+name = "Guilherme Diego"
+homepage = "https://github.com/guidiego"
