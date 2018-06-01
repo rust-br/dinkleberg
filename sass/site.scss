@@ -50,19 +50,30 @@ code {
     background: #FFF;
     position: fixed;
 
-    .title-link {
-        text-decoration: none;
-    }
-
     .title {
-        font-family: $font-alt;
+        display: block;
+        text-decoration: none;
         text-align: center;
-        color: $color-black;
-        margin: 0;
-        font-size: 20px;
 
         @media screen and (min-width: 900px) {
             float: left;
+        }
+
+        img, h1 {
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        h1 {
+            font-family: $font-alt;
+            color: $color-black;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        img {
+            height: 25px;
+            margin-right: 10px;
         }
     }
 }
