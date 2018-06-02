@@ -16,7 +16,7 @@ blog_logo="/imgs/common/logo.png" #will appear on top header
 blog_title="rust::br::Blog" #will appear on top header after logo
 
 ## i18n words
-label_tags = "Tags" 
+label_tags = "Tags"
 label_tag = "Tag"
 label_categories = "Categorias"
 label_category = "Categoria"
@@ -25,6 +25,17 @@ label_next = "Próxima"
 label_previous = "Anterior"
 label_page = "Página"
 label_of = "de"
+
+og_image="" # Image that will appear on social media
+og_alt_image="" # Alt for og_image
+og_site_name="" # Site Name for Open Graphic
+keywords="" # Keywords for SEO
+
+educational_use="knowledge share" # OPTIONAL
+copyright_year="2018" # OPTIONAL
+
+fb_app_id="???" # OPTIONAL, Facebook App Id to help in metrics
+twitter_username="@???" # OPTIONAL, Twitter User to help with metrics
 
 ## Sidebar automatic links
 sidebar = [
