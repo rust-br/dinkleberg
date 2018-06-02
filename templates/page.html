@@ -1,8 +1,25 @@
 {% extends "index.html" %}
 
 {% block title %} {{page.title}} {% endblock title %}
+{% block ogtitle %} {{page.title}} {% endblock ogtitle %}">
+{% block ogdesc %} {{page.description}} {% endblock ogdesc %}">
+{% block ogurl %}{{page.permalink}}{% endblock ogurl%}">
+{% block ogaltimg %}{{page.title}}{% endblock ogaltimg %}">
+{% block ogimg %}
+    {% if page.extra.image %}
+        {{page.extra.image}}
+    {% else if config.extra.og_image}
+        {{config.extra.og_image}}
+    {% endif %}
+{% endblock ogimg %}">
+
 {% block content %}
 <article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    {% if page.extra.image %}
+        <meta itemprop="image" content="{{page.extra.image}}">
+    {% else if config.extra.og_image}
+        <meta itemprop="image" content="{{config.extra.og_image}}">
+    {% endif %}
     <header>
         {% if page.category %}
             <a  class="category" href="{{ get_taxonomy_url(kind="category", name=page.category) }}">
