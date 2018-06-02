@@ -30,11 +30,35 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-        <meta name="description" itemprop="about" content="Blog dedicado a publição de conteudos da linguagem de programação Rust no Brasil">
-        <meta name="keywords" itemprop="keywords" content="Rust, Lang, Language, Linguagem de Programação, Desenvolvimento, Brazil, Brasil">
+        <meta name="description" itemprop="about" content="{{config.description}}">
+        <meta name="keywords" itemprop="keywords" content="{{config.extra.keywords}}">
         <meta itemprop="headline" content="{{config.title}}"/>
-        <meta itemprop="educationalUse" content="knowledge share" />
-        <meta itemprop="copyrightYear" content="2018" />
+
+        {% if config.extra.educational_use %}
+            <meta itemprop="educationalUse" content="{{config.extra.educational_use}}" />
+        {% endif %}
+
+        {% if config.extra.copyright_year %}
+            <meta itemprop="copyrightYear" content="{{config.extra.copyright_year}}" />
+        {% endif %}
+
+        <!--  Social Media -->
+        <meta property="og:title" content="{{config.title}}{% block ogtitle %}{% endblock ogtitle %}">
+        <meta property="og:description" content="{% block ogdesc %}{{config.description}}{% endblock ogdesc %}">
+        <meta property="og:image" content="{% block ogimg %}{{config.extra.og_image}}{% endblock ogimg %}">
+        <meta property="og:url" content="{% block ogurl %}{{config.base_url}}{% endblock ogurl%}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:site_name" content="{{config.extra.og_site_name}}">
+        <meta name="twitter:image:alt" content="{% block ogaltimg %}{{config.extra.og_alt_image}}{% endblock ogaltimg %}">
+
+
+        {% if config.extra.fb_app_id %}
+            <meta property="fb:app_id" content="{{config.extra.fb_app_id}}" />
+        {% endif %}
+
+        {% if config.extra.twitter_username %}
+            <meta name="twitter:site" content="{{config.extra.twitter_username}}">
+        {% endif %}
     {% endblock seo %}
 
     {% if config.generate_rss %}
