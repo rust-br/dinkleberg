@@ -5,20 +5,16 @@
 {% block ogdesc %} {{page.description}} {% endblock ogdesc %}">
 {% block ogurl %}{{page.permalink}}{% endblock ogurl%}">
 {% block ogaltimg %}{{page.title}}{% endblock ogaltimg %}">
-{% block ogimg %}
-    {% if page.extra.image %}
-        {{page.extra.image}}
-    {% else if config.extra.og_image}
-        {{config.extra.og_image}}
-    {% endif %}
-{% endblock ogimg %}">
+{% block ogimg %}{% if page.extra.image %}{{page.extra.image}}{% else %}{% if config.extra.og_image %}{{config.extra.og_image}}{% endif %}{% endif %}{% endblock ogimg %}
 
 {% block content %}
 <article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
     {% if page.extra.image %}
         <meta itemprop="image" content="{{page.extra.image}}">
-    {% else if config.extra.og_image}
-        <meta itemprop="image" content="{{config.extra.og_image}}">
+    {% else %}
+        {% if config.extra.og_image %}
+            <meta itemprop="image" content="{{config.extra.og_image}}">
+        {% endif %}
     {% endif %}
     <header>
         {% if page.category %}

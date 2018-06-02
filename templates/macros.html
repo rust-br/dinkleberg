@@ -1,6 +1,13 @@
 {% macro post(page) %}
     <a class="post" href="{{page.permalink}}">
         <article itemscope itemtype="http://schema.org/BlogPosting">
+            {% if page.extra.image %}
+                <meta itemprop="image" content="{{page.extra.image}}">
+            {% else %}
+                {% if config.extra.og_image %}
+                    <meta itemprop="image" content="{{config.extra.og_image}}">
+                {% endif %}
+            {% endif %}
             <span class="category">{{page.category}}</span>
             <h2 class="title" itemprop="headline">{{page.title}}</h2>
             <span class="description">{{page.description}}</span>
