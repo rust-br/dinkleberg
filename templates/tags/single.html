@@ -1,8 +1,8 @@
 {% extends "index.html" %}
 {% block content %}
     <main class="main">
-        <h3 class="page-title"> {{ config.extra.label_tag }}: {{tag.name}} </h3>
-        {% for page in tag.pages %}
+        <h3 class="page-title"> {{ config.extra.label_tag }}: {{term.name}} </h3>
+        {% for page in term.pages %}
             {{ macro::post(page=page) }}
         {% endfor %}
     </main>

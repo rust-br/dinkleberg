@@ -3,7 +3,7 @@
     <main class="main">
         <h3 class="page-title"> {{ config.extra.label_categories }} </h3>
         <ul class="base-list">
-            {% for category in categories %}
+            {% for category in terms %}
                 <li>
                     <a href="{{ category.permalink }}">{{ category.name }}</a>({{ category.pages | length }})
                 </li>

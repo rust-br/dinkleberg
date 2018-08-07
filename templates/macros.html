@@ -8,7 +8,7 @@
                     <meta itemprop="image" content="{{config.extra.og_image}}">
                 {% endif %}
             {% endif %}
-            <span class="category">{{page.category}}</span>
+            {% if page.taxonomies.categories %}<span class="category">{{page.taxonomies.categories[0]}}</span>{% endif %}
             <h2 class="title" itemprop="headline">{{page.title}}</h2>
             <span class="description">{{page.description}}</span>
 
