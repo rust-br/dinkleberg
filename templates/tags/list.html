@@ -3,7 +3,7 @@
     <main class="main">
         <h3 class="page-title"> {{ config.extra.label_tag }} </h3>
         <ul class="base-list">
-            {% for tag in tags %}
+            {% for tag in terms %}
                 <li>
                     <a href="{{ tag.permalink }}">{{ tag.name }}</a>({{ tag.pages | length }})
                 </li>

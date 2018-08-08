@@ -6,6 +6,12 @@ compile_sass = true
 highlight_code = true
 build_search_index = false
 
+taxonomies = [
+ {name = "categories"},
+ {name = "tags"},
+]
+
+
 [extra]
 blog_title="Dinkleberg"
 label_tags = "Tags"

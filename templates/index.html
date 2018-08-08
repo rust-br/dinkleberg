@@ -66,8 +66,8 @@
     {% endif %}
 
     {% block css %}
-        <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro" as="style" onload="this.rel='stylesheet'">
-        <link rel="preload" href="{{ get_url(path="site.css", trailing_slash=false) }}" as="style" onload="this.rel='stylesheet'">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+        <link rel="stylesheet" href="{{ get_url(path="site.css", trailing_slash=false) }}">
     {% endblock css %}
 </head>
 <body>

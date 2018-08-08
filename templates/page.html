@@ -17,9 +17,9 @@
         {% endif %}
     {% endif %}
     <header>
-        {% if page.category %}
-            <a  class="category" href="{{ get_taxonomy_url(kind="category", name=page.category) }}">
-                {{ page.category }}
+        {% if page.taxonomies.categories %}
+            <a  class="category" href="{{ get_taxonomy_url(kind="categories", name=page.taxonomies.categories[0]) }}">
+                {{ page.taxonomies.categories[0]  }}
             </a>
         {% endif %}
         <h1 class="title" itemprop="headline">{{ page.title }}</h1>
@@ -27,13 +27,13 @@
             <span itemprop="name">{{page.extra.author}}</span>
         </address>
         <div class="extra">
-            {% if page.tags %}
+            {% if page.taxonomies.tags %}
                 {{config.extra.label_tags}}:
-                {% for tag in page.tags %}
-                    <a href="{{ get_taxonomy_url(kind="tag", name=tag) }}">{{ tag }}</a>
-                    {% if page.tags | length > 1 %}
-                        {% if loop.index != page.tags | length %}
-                            {% if loop.index == page.tags | length - 1 %}
+                {% for tag in page.taxonomies.tags %}
+                    <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
+                    {% if page.taxonomies.tags | length > 1 %}
+                        {% if loop.index != page.taxonomies.tags | length %}
+                            {% if loop.index == page.taxonomies.tags | length - 1 %}
                                 e
                             {% else %}
                                 ,
