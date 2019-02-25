@@ -30,7 +30,7 @@
         {% else %}
             <span>&laquo; {{ extra.label_previous }}</span>
         {% endif %}
-            <span class="pages"> {{ extra.label_page }} {{ ref.current_index }} {{extra.label_of}} {{ ref.pages | length }} </span>
+            <span class="pages"> {{ extra.label_page }} {{ ref.current_index }} {{extra.label_of}} {{ ref.number_pagers }} </span>
         {% if ref.next %}
             <a href="{{ ref.next }}">{{ extra.label_next }} &raquo;</a>
         {% else %}
