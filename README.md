@@ -25,6 +25,7 @@ label_next = "Próxima"
 label_previous = "Anterior"
 label_page = "Página"
 label_of = "de"
+label_minutes = "minutos"
 
 og_image="" # Image that will appear on social media
 og_alt_image="" # Alt for og_image
