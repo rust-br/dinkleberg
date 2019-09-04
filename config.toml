@@ -16,6 +16,7 @@ taxonomies = [
 blog_title="Dinkleberg"
 label_tags = "Tags"
 label_tag = "Tag"
+label_minutes = "Minutes"
 label_categories = "Categories"
 label_category = "Category"
 label_relative_posts = "Relative Posts"
